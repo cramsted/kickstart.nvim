@@ -1,69 +1,69 @@
 -- [[ Settings ]]
-vim.cmd [[set relativenumber]]
-vim.o.hlsearch = true -- overriding the default for kickstart.nvim
-vim.cmd [[set noswapfile]]
-vim.cmd [[set nobackup]]
-vim.cmd [[set noerrorbells]]
-vim.cmd [[set expandtab]]
-vim.cmd [[set smarttab]]
-vim.cmd [[set shiftwidth=2]]
-vim.cmd [[set undofile]]
-vim.cmd [[set tabstop=2 softtabstop=2]]
-vim.cmd [[set splitbelow  splitright]]
-vim.cmd [[set smartindent]]
-vim.cmd [[set autoread]]
-vim.cmd [[set updatetime=50]]
--- handles tabs and spaces correctly for pasted in code
-vim.cmd [[set pastetoggle=<F2>]]
--- closing bracket support
-vim.cmd [[inoremap { {}<Esc>ha]]
-vim.cmd [[inoremap ( ()<Esc>ha]]
-vim.cmd [[inoremap [ []<Esc>ha]]
-vim.cmd [[inoremap " ""<Esc>ha]]
-vim.cmd [[inoremap ' ''<Esc>ha]]
-vim.cmd [[inoremap ` ``<Esc>ha]]
-vim.cmd[[set clipboard=unnamedplus]]
--- WSL yank support
-vim.cmd [[
-  let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
-  if executable(s:clip)
-      augroup WSLYank
-          autocmd!
-          autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
-      augroup END
-  endif
-]]
-
-
--- [[ Keyboard shortcuts ]]
--- moving between windows
-vim.cmd [[nnoremap <leader>j <C-W>j]]
-vim.cmd [[nnoremap <leader>k <C-W>k]]
-vim.cmd [[nnoremap <leader>l <C-W>l]]
-vim.cmd [[nnoremap <leader>h <C-W>h]]
--- resizing windows
-vim.cmd [[noremap <silent> <C-Left> :vertical resize -3<CR>]]
-vim.cmd [[noremap <silent> <C-Right> :vertical resize +3<CR>]]
-vim.cmd [[noremap <silent> <C-Up> :resize +3<CR>]]
-vim.cmd [[noremap <silent> <C-Down> :resize -3<CR>}]]
--- split the current buffer
-vim.cmd [[noremap <leader>\ :vsp<CR>]]
-vim.cmd [[noremap <leader>- :sp<CR>]]
--- Nvim config quick access
-vim.keymap.set('n', '<leader>R', ":luafile %<CR>", { desc = "[R]un current lua file" })
-vim.keymap.set('n', '<leader>ci', ":e ~/.config/nvim/init.lua<CR>", { desc = "Open [C]onfig file [i]nit.lua" })
-vim.keymap.set('n', '<leader>cp', ":e ~/.config/nvim/lua/custom/plugins.lua<CR>", { desc = "Open [C]onfig file [p]lugins.lua" })
-vim.keymap.set('n', '<leader>cd', ":e ~/.config/nvim/lua/core/defaults.lua<CR>", { desc = "Open [C]onfig file [d]efaults.lua" })
--- write shortcut
-vim.keymap.set({'n', 'v'}, '<leader>w', ":w<CR>")
--- select all
-vim.cmd [[ nmap <leader>V ggVG ]]
--- find and replace all matching instances of selected text
-vim.cmd [[vnoremap <C-r> "hy:%s/<C-r>h/<C-r>h/g<left><left>]]
--- search visually selected text
-vim.cmd [[vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>]]
--- remove highlight from searched text
-vim.cmd [[nmap <leader>/ :noh<CR>]]
+-- vim.cmd [[set relativenumber]]
+-- vim.o.hlsearch = true -- overriding the default for kickstart.nvim
+-- vim.cmd [[set noswapfile]]
+-- vim.cmd [[set nobackup]]
+-- vim.cmd [[set noerrorbells]]
+-- vim.cmd [[set expandtab]]
+-- vim.cmd [[set smarttab]]
+-- vim.cmd [[set shiftwidth=2]]
+-- vim.cmd [[set undofile]]
+-- vim.cmd [[set tabstop=2 softtabstop=2]]
+-- vim.cmd [[set splitbelow  splitright]]
+-- vim.cmd [[set smartindent]]
+-- vim.cmd [[set autoread]]
+-- vim.cmd [[set updatetime=50]]
+-- -- handles tabs and spaces correctly for pasted in code
+-- vim.cmd [[set pastetoggle=<F2>]]
+-- -- closing bracket support
+-- vim.cmd [[inoremap { {}<Esc>ha]]
+-- vim.cmd [[inoremap ( ()<Esc>ha]]
+-- vim.cmd [[inoremap [ []<Esc>ha]]
+-- vim.cmd [[inoremap " ""<Esc>ha]]
+-- vim.cmd [[inoremap ' ''<Esc>ha]]
+-- vim.cmd [[inoremap ` ``<Esc>ha]]
+-- vim.cmd[[set clipboard=unnamedplus]]
+-- -- WSL yank support
+-- vim.cmd [[
+--   let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+--   if executable(s:clip)
+--       augroup WSLYank
+--           autocmd!
+--           autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+--       augroup END
+--   endif
+-- ]]
+--
+--
+-- -- [[ Keyboard shortcuts ]]
+-- -- moving between windows
+-- vim.cmd [[nnoremap <leader>j <C-W>j]]
+-- vim.cmd [[nnoremap <leader>k <C-W>k]]
+-- vim.cmd [[nnoremap <leader>l <C-W>l]]
+-- vim.cmd [[nnoremap <leader>h <C-W>h]]
+-- -- resizing windows
+-- vim.cmd [[noremap <silent> <C-Left> :vertical resize -3<CR>]]
+-- vim.cmd [[noremap <silent> <C-Right> :vertical resize +3<CR>]]
+-- vim.cmd [[noremap <silent> <C-Up> :resize +3<CR>]]
+-- vim.cmd [[noremap <silent> <C-Down> :resize -3<CR>}]]
+-- -- split the current buffer
+-- vim.cmd [[noremap <leader>\ :vsp<CR>]]
+-- vim.cmd [[noremap <leader>- :sp<CR>]]
+-- -- Nvim config quick access
+-- vim.keymap.set('n', '<leader>R', ":luafile %<CR>", { desc = "[R]un current lua file" })
+-- vim.keymap.set('n', '<leader>ci', ":e ~/.config/nvim/init.lua<CR>", { desc = "Open [C]onfig file [i]nit.lua" })
+-- vim.keymap.set('n', '<leader>cp', ":e ~/.config/nvim/lua/custom/plugins.lua<CR>", { desc = "Open [C]onfig file [p]lugins.lua" })
+-- vim.keymap.set('n', '<leader>cd', ":e ~/.config/nvim/lua/core/defaults.lua<CR>", { desc = "Open [C]onfig file [d]efaults.lua" })
+-- -- write shortcut
+-- vim.keymap.set({'n', 'v'}, '<leader>w', ":w<CR>")
+-- -- select all
+-- vim.cmd [[ nmap <leader>V ggVG ]]
+-- -- find and replace all matching instances of selected text
+-- vim.cmd [[vnoremap <C-r> "hy:%s/<C-r>h/<C-r>h/g<left><left>]]
+-- -- search visually selected text
+-- vim.cmd [[vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>]]
+-- -- remove highlight from searched text
+-- vim.cmd [[nmap <leader>/ :noh<CR>]]
 -- tabnine
 -- NOTE: removed temporarily until config is more put together
 -- require('tabnine').setup({
