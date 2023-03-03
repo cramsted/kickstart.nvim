@@ -12,6 +12,7 @@ vim.cmd [[set tabstop=2 softtabstop=2]]
 vim.cmd [[set splitbelow  splitright]]
 vim.cmd [[set smartindent]]
 vim.cmd [[set autoread]]
+vim.cmd [[set cursorline]]
 vim.cmd [[set updatetime=50]]
 -- handles tabs and spaces correctly for pasted in code
 vim.cmd [[set pastetoggle=<F2>]]
