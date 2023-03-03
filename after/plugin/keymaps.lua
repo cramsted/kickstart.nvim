@@ -30,3 +30,5 @@ vim.cmd [[vnoremap <C-r> "hy:%s/<C-r>h/<C-r>h/g<left><left>]]
 vim.cmd [[vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>]]
 -- remove highlight from searched text
 vim.cmd [[nmap <leader>/ :noh<CR>]]
+-- force quit vim
+vim.keymap.set({'n', 'v'}, '<C-q>', ":qa!<CR>")
