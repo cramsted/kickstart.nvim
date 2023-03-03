@@ -23,6 +23,7 @@ vim.cmd [[set pastetoggle=<F2>]]
 -- vim.cmd [[inoremap " ""<Esc>ha]]
 -- vim.cmd [[inoremap ' ''<Esc>ha]]
 -- vim.cmd [[inoremap ` ``<Esc>ha]]
+vim.opt.termguicolors = true
 vim.cmd[[set clipboard=unnamedplus]]
 -- WSL yank support
 vim.cmd [[
