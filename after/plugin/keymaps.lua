@@ -15,7 +15,7 @@ vim.cmd [[noremap <leader>- :sp<CR>]]
 -- Nvim config quick access
 vim.keymap.set('n', '<leader>R', ":luafile %<CR>", { desc = "[R]un current lua file" })
 vim.keymap.set('n', '<leader>ci', ":e ~/.config/nvim/init.lua<CR>", { desc = "Open [C]onfig file [i]nit.lua" })
-vim.keymap.set('n', '<leader>cP', ":e ~/.config/nvim/custom/plugins/", { desc = "Open [C]onfig directory for [p]lugins" })
+vim.keymap.set('n', '<leader>cP', ":e ~/.config/nvim/lua/custom/plugins/", { desc = "Open [C]onfig directory for [p]lugins" })
 vim.keymap.set('n', '<leader>cp', ":e ~/.config/nvim/after/plugin/plugin-configs.lua<CR>", { desc = "Open [C]onfig file for [p]lugins" })
 vim.keymap.set('n', '<leader>ck', ":e ~/.config/nvim/after/plugin/keymaps.lua<CR>", { desc = "Open [C]onfig file [k]eymaps.lua" })
 vim.keymap.set('n', '<leader>cd', ":e ~/.config/nvim/after/plugin/autocmds.lua<CR>", { desc = "Open [C]onfig file autocm[d]s.lua" })

@@ -84,3 +84,6 @@ end, {remap=true})
 vim.keymap.set('', '<leader>t', function()
   hop.hint_char1({  current_line_only = false})
 end, {remap=true})
+
+-- neo-tree
+require('neo-tree').setup()
