@@ -5,10 +5,14 @@ vim.cmd [[nnoremap <leader>k <C-W>k]]
 vim.cmd [[nnoremap <leader>l <C-W>l]]
 vim.cmd [[nnoremap <leader>h <C-W>h]]
 -- resizing windows
-vim.cmd [[noremap <silent> <C-Left> :vertical resize -3<CR>]]
-vim.cmd [[noremap <silent> <C-Right> :vertical resize +3<CR>]]
-vim.cmd [[noremap <silent> <C-Up> :resize +3<CR>]]
-vim.cmd [[noremap <silent> <C-Down> :resize -3<CR>}]]
+-- vim.cmd [[noremap <silent> <C-Left> :vertical resize +3<CR>]]
+-- vim.cmd [[noremap <silent> <C-Right> :vertical resize -3<CR>]]
+-- vim.cmd [[noremap <silent> <C-Up> :resize -3<CR>]]
+-- vim.cmd [[noremap <silent> <C-Down> :resize +3<CR>}]]
+vim.keymap.set({'n', 'v'}, '<C-Left>', ":vertical resize +3<CR>", {desc = "Move window border left"})
+vim.keymap.set({'n', 'v'}, '<C-Right>', ":vertical resize -3<CR>", {desc = "Move window border right"})
+vim.keymap.set({'n', 'v'}, '<C-Up>', ": resize -3<CR>", {desc = "Move window border up"})
+vim.keymap.set({'n', 'v'}, '<C-Down>', ": resize +3<CR>", {desc = "Move window border down"})
 -- split the current buffer
 vim.cmd [[noremap <leader>\ :vsp<CR>]]
 vim.cmd [[noremap <leader>- :sp<CR>]]
@@ -31,5 +35,7 @@ vim.cmd [[vnoremap <C-r> "hy:%s/<C-r>h/<C-r>h/g<left><left>]]
 vim.cmd [[vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>]]
 -- remove highlight from searched text
 vim.cmd [[nmap <leader>/ :noh<CR>]]
--- force quit vim
-vim.keymap.set({'n', 'v'}, '<C-q>', ":qa!<CR>")
+-- force quit vim/current window
+vim.keymap.set({ 'n', 'v' }, '<C-q>', ":q!<CR>")
+-- auto format
+-- vim.keymap.set({ 'n', 'v' }, '<Leader>x', vim.lsp.buf.format, bufopts)

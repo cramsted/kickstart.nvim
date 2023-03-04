@@ -9,42 +9,39 @@
 --   execlude_filetypes = {"TelescopePrompt"}
 -- })
 --
--- easymotion
-vim.cmd [[map  <Leader>f <Plug>(easymotion-bd-f) ]]
-vim.cmd [[nmap <Leader>f <Plug>(easymotion-overwin-f)]]
 
 -- telescope-file-browser
 -- To get telescope-file-browser loaded and working with telescope,
 -- you need to call load_extension, somewhere after setup function:
-require("telescope").load_extension "file_browser"
-vim.api.nvim_set_keymap(
-  "n",
-  "<space>fB",
-  ":Telescope file_browser\n",
-  { noremap = true }
-)
--- open file_browser with the path of the current buffer
-vim.api.nvim_set_keymap(
-  "n",
-  "<space>fb",
-  ":Telescope file_browser path=%:p:h select_buffer=true\n",
-  { noremap = true }
-)
+-- require("telescope").load_extension "file_browser"
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<space>fB",
+--   ":Telescope file_browser\n",
+--   { noremap = true }
+-- )
+-- -- open file_browser with the path of the current buffer
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<space>fb",
+--   ":Telescope file_browser path=%:p:h select_buffer=true\n",
+--   { noremap = true }
+-- )
 
 -- symbols-outline.nvim
-require("symbols-outline").setup()
-vim.api.nvim_set_keymap(
-  "n",
-  "<space>so",
-  ":SymbolsOutline\n",
-  { noremap = true }
-)
+-- require("symbols-outline").setup()
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<leader>so",
+--   ":SymbolsOutline\n",
+--   { noremap = true }
+-- )
 --  vim-fugitive
-vim.cmd [[nmap <leader>gh :diffget //3<CR> ]]
-vim.cmd [[nmap <leader>gf :diffget //2<CR> ]]
-vim.cmd [[nmap <leader>gs :G<CR> ]]
-vim.cmd [[nmap <leader>gc :G commit -m ""<left>]]
-vim.cmd [[nmap <leader>gu :G push<CR> ]]
+-- vim.cmd [[nmap <leader>gh :diffget //3<CR> ]]
+-- vim.cmd [[nmap <leader>gf :diffget //2<CR> ]]
+-- vim.cmd [[nmap <leader>gs :G<CR> ]]
+-- vim.cmd [[nmap <leader>gc :G commit -m ""<left>]]
+-- vim.cmd [[nmap <leader>gu :G push<CR> ]]
 
 -- nvim-ts-autotag
 -- for completing tags like <div></div>
@@ -63,27 +60,27 @@ vim.cmd [[nmap <leader>gu :G push<CR> ]]
 -- )
 --
 -- todo-comments.nvim
-require("todo-comments").setup()
+-- require("todo-comments").setup()
 
 -- alpha-nvim
 -- TODO: need to update the keyoard shortcuts on the startup menu
 -- require("alpha").setup(require("alpha.themes.dashboard").config)
 
 -- which-key
-require("which-key").setup()
+-- require("which-key").setup()
 
 -- hop.nvim
-local hop = require('hop')
-local directions = require('hop.hint').HintDirection
-vim.keymap.set('', 'f', function()
-  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
-end, {remap=true})
-vim.keymap.set('', 'F', function()
-  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
-end, {remap=true})
-vim.keymap.set('', '<leader>t', function()
-  hop.hint_char1({  current_line_only = false})
-end, {remap=true})
+-- local hop = require('hop')
+-- local directions = require('hop.hint').HintDirection
+-- vim.keymap.set('', 'f', function()
+--   hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
+-- end, {remap=true})
+-- vim.keymap.set('', 'F', function()
+--   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
+-- end, {remap=true})
+-- vim.keymap.set('', '<leader>t', function()
+--   hop.hint_char1({  current_line_only = false})
+-- end, {remap=true})
 
 -- neo-tree
-require('neo-tree').setup()
+-- require('neo-tree').setup()
