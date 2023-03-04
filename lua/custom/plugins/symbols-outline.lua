@@ -4,9 +4,9 @@ return {
 		require("symbols-outline").setup()
 		vim.api.nvim_set_keymap(
 			"n",
-			"<leader>so",
+			"<leader>o",
 			":SymbolsOutline\n",
-			{ noremap = true }
+			{ noremap = true , desc = "Show File [O]utline"}
 		)
 	end
 }

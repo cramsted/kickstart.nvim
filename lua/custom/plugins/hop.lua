@@ -12,9 +12,9 @@ return {
     vim.keymap.set('', 'F', function()
       hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
     end, {remap=true})
-    vim.keymap.set('', '<leader>t', function()
+    vim.keymap.set('', '<leader>f', function()
       hop.hint_char1({  current_line_only = false})
-    end, {remap=true})
+    end, {remap=true, desc = "Hop to any char in buffer"})
 
   end
 }
