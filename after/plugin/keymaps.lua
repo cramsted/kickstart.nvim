@@ -43,3 +43,14 @@ vim.keymap.set('n', '<leader>/', ':noh<CR>', {desc = "Dehighlight Searched Text"
 
 -- force quit vim/current window
 vim.keymap.set({ 'n', 'v' }, '<C-q>', ":q!<CR>")
+
+-- LSP
+vim.keymap.set('n', '<leader>pi', ":LspInfo<CR>", {desc = "LS[P] [I]nfo" })
+vim.keymap.set('n', '<leader>pr', ":LspRestart<CR>", {desc = "LS[P] [R]estart" })
+vim.keymap.set('n', '<leader>ps', ":LspStart<CR>", {desc = "LS[P] [S]tart" })
+vim.keymap.set('n', '<leader>po', ":LspStop<CR>", {desc = "LS[P] St[O]p" })
+vim.keymap.set('n', '<leader>pl', ":LspLog<CR>", {desc = "LS[P] [L]og" })
+
+-- Telescope
+vim.keymap.set('n', '<leader>sa', ':Telescope find_files hidden=true', { desc = '[S]earch [A]ll files' })
+vim.keymap.set('n', '<leader>sr', ':Telescope resume', { desc = '[S]earch [R]esume' })
