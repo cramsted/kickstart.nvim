@@ -1,6 +1,6 @@
 -- [[ Settings ]]
 vim.cmd [[set relativenumber]]
-vim.o.hlsearch = true -- overriding the default for kickstart.nvim
+-- vim.cmd [[set hlsearch]] -- overriding the default for kickstart.nvim
 vim.cmd [[set noswapfile]]
 vim.cmd [[set nobackup]]
 vim.cmd [[set noerrorbells]]
