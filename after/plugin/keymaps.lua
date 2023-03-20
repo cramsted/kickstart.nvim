@@ -39,7 +39,7 @@ vim.keymap.set('v', '<C-r>', '"hy:%s/<C-r>h/<C-r>h/g<left><left>', {desc = "Find
 -- vim.cmd [[vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>]]
 --
 -- remove highlight from searched text
-vim.keymap.set('n', '<leader>/', ':noh<CR>', {desc = "Dehighlight Searched Text"})
+-- vim.keymap.set('n', '<leader>/', ':noh<CR>', {desc = "Dehighlight Searched Text"})
 
 -- force quit vim/current window
 vim.keymap.set({ 'n', 'v' }, '<C-q>', ":q!<CR>")
