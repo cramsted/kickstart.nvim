@@ -53,4 +53,4 @@ vim.keymap.set('n', '<leader>pl', ":LspLog<CR>", {desc = "LS[P] [L]og" })
 
 -- Telescope
 vim.keymap.set('n', '<leader>sa', ':Telescope find_files no_ignore=true hidden=true<CR>', { desc = '[S]earch [A]ll files' })
-vim.keymap.set('n', '<leader>sr', ':Telescope resume', { desc = '[S]earch [R]esume' })
+vim.keymap.set('n', '<leader>sr', ':Telescope resume<CR>', { desc = '[S]earch [R]esume' })
