@@ -14,6 +14,7 @@ vim.cmd [[set smartindent]]
 vim.cmd [[set autoread]]
 vim.cmd [[set cursorline]]
 vim.cmd [[set updatetime=50]]
+vim.cmd [[set scrolloff=5]]
 -- handles tabs and spaces correctly for pasted in code
 vim.cmd [[set pastetoggle=<F2>]]
 -- closing bracket support
