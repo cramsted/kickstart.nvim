@@ -16,5 +16,11 @@ return {
 		vim.keymap.set({ 'n', 'v' }, '<leader>m8', function() require("harpoon.ui").nav_file(8) end, { desc = "[M]ark [F]ile 8" })
 		vim.keymap.set({ 'n', 'v' }, '<leader>m9', function() require("harpoon.ui").nav_file(9) end, { desc = "[M]ark [F]ile 9" })
 		vim.keymap.set({ 'n', 'v' }, '<leader>m0', function() require("harpoon.ui").nav_file(0) end, { desc = "[M]ark [F]ile 0" })
+		require("harpoon").setup({
+			menu = {
+					width = vim.api.nvim_win_get_width(0) - 30,
+			}
+		})
+
 	end
 }
