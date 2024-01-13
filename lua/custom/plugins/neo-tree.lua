@@ -251,8 +251,10 @@ return {
 
       -- vim.cmd([[nnoremap \ :NeoTreeShowToggle<cr>]])
       -- vim.cmd([[nnoremap \| :NeoTreeFloatToggle<cr>]])
-      vim.keymap.set({'n', 'v'}, '|', ':NeoTreeShowToggle<cr>', {desc = "Toggle File Explorer Sidebar"})
-      vim.keymap.set({'n', 'v'}, '\\', ':NeoTreeFloatToggle<cr>', {desc = "Toggle File Explorer Floating"})
+      -- vim.keymap.set({'n', 'v'}, '|', ':NeoTreeShowToggle<cr>', {desc = "Toggle File Explorer Sidebar"})
+      -- vim.keymap.set({'n', 'v'}, '\\', ':NeoTreeFloatToggle<cr>', {desc = "Toggle File Explorer Floating"})
+      vim.keymap.set({'n', 'v'}, '|', ':Neotree toggle<cr>', {desc = "Toggle File Explorer Sidebar"})
+      vim.keymap.set({'n', 'v'}, '\\', ':Neotree toggle float<cr>', {desc = "Toggle File Explorer Floating"})
     end
 }
 
