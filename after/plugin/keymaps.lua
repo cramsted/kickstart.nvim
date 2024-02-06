@@ -1,10 +1,10 @@
 -- [[ Keyboard shortcuts ]]
 --
 -- moving between windows
-vim.keymap.set('n', '<C-j>', '<C-W>j', { desc = "Select Window Down" })
-vim.keymap.set('n', '<C-k>', '<C-W>k', { desc = "Select Window Up" })
-vim.keymap.set('n', '<C-l>', '<C-W>l', { desc = "Select Window Right" })
-vim.keymap.set('n', '<C-h>', '<C-W>h', { desc = "Select Window Left" })
+-- vim.keymap.set('n', '<C-j>', '<C-W>j', { desc = "Select Window Down" })
+-- vim.keymap.set('n', '<C-k>', '<C-W>k', { desc = "Select Window Up" })
+-- vim.keymap.set('n', '<C-l>', '<C-W>l', { desc = "Select Window Right" })
+-- vim.keymap.set('n', '<C-h>', '<C-W>h', { desc = "Select Window Left" })
 
 -- resizing windows
 vim.keymap.set({ 'n', 'v' }, '<C-Left>', ":vertical resize +3<CR>", { desc = "Move Window Border Left" })

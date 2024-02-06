@@ -71,7 +71,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',  opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -111,13 +111,20 @@ require('lazy').setup({
     },
   },
 
+  -- {
+  --   -- Theme inspired by Atom
+  --   'navarasu/onedark.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'onedark'
+  --   end,
+  -- },
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    "ellisonleao/gruvbox.nvim",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
+      vim.cmd.colorscheme 'gruvbox'
+    end
   },
 
   {
@@ -127,7 +134,8 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        -- theme = 'onedark',
+        theme = 'gruvbox',
         component_separators = '|',
         section_separators = '',
       },
@@ -144,7 +152,7 @@ require('lazy').setup({
   -- },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim',         opts = {} },
+  { 'numToStr/Comment.nvim', opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   {
@@ -259,8 +267,8 @@ require('telescope').setup {
   defaults = {
     mappings = {
       i = {
-            ['<C-u>'] = false,
-            ['<C-d>'] = false,
+        ['<C-u>'] = false,
+        ['<C-d>'] = false,
       },
     },
   },
@@ -498,7 +506,7 @@ cmp.setup {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-        ['<Tab>'] = cmp.mapping(function(fallback)
+    ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       elseif luasnip.expand_or_locally_jumpable() then
@@ -507,7 +515,7 @@ cmp.setup {
         fallback()
       end
     end, { 'i', 's' }),
-        ['<S-Tab>'] = cmp.mapping(function(fallback)
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
       elseif luasnip.locally_jumpable(-1) then
