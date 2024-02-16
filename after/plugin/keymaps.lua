@@ -11,6 +11,7 @@ vim.keymap.set({ 'n', 'v' }, '<C-Left>', ":vertical resize +3<CR>", { desc = "Mo
 vim.keymap.set({ 'n', 'v' }, '<C-Right>', ":vertical resize -3<CR>", { desc = "Move Window Border Right" })
 vim.keymap.set({ 'n', 'v' }, '<C-Up>', ": resize -3<CR>", { desc = "Move Window Border Up" })
 vim.keymap.set({ 'n', 'v' }, '<C-Down>', ": resize +3<CR>", { desc = "Move Window Border Down" })
+vim.cmd [[let g:tmux_naviagtor_preserve_zoom = 1]] -- disable moving to other tmux windows when current window is zoomed
 
 -- split the current buffer
 vim.keymap.set({ 'n', 'v' }, '<leader>\\', ':vsp<CR>', { desc = "Split Buffer Vert" })
@@ -19,10 +20,10 @@ vim.keymap.set({ 'n', 'v' }, '<leader>-', ':sp<CR>', { desc = "Split Buffer Hori
 -- Nvim config quick access
 vim.keymap.set('n', '<leader>R', ":luafile %<CR>", { desc = "[R]un current lua file" })
 vim.keymap.set('n', '<leader>ci', ":e ~/.config/nvim/init.lua<CR>", { desc = "Open [C]onfig file [i]nit.lua" })
-vim.keymap.set('n', '<leader>cP', ":e ~/.config/nvim/lua/custom/plugins/",
+vim.keymap.set('n', '<leader>cp', ":e ~/.config/nvim/lua/custom/plugins/",
     { desc = "Open [C]onfig directory for [p]lugins" })
-vim.keymap.set('n', '<leader>cp', ":e ~/.config/nvim/after/plugin/plugin-configs.lua<CR>",
-    { desc = "Open [C]onfig file for [p]lugins" })
+-- vim.keymap.set('n', '<leader>cp', ":e ~/.config/nvim/after/plugin/plugin-configs.lua<CR>",
+--     { desc = "Open [C]onfig file for [p]lugins" })
 vim.keymap.set('n', '<leader>ck', ":e ~/.config/nvim/after/plugin/keymaps.lua<CR>",
     { desc = "Open [C]onfig file [k]eymaps.lua" })
 vim.keymap.set('n', '<leader>cd', ":e ~/.config/nvim/after/plugin/autocmds.lua<CR>",
@@ -60,7 +61,8 @@ vim.keymap.set('n', '<leader>pl', ":LspLog<CR>", { desc = "LS[P] [L]og" })
 -- Telescope
 vim.keymap.set('n', '<leader>sa', ':Telescope find_files no_ignore=true hidden=true<CR>',
     { desc = '[S]earch [A]ll files' })
-vim.keymap.set('n', '<leader>sr', ':Telescope resume<CR>', { desc = '[S]earch [R]esume' })
+-- vim.keymap.set('n', '<leader>sr', ':Telescope resume<CR>', { desc = '[S]earch [R]esume' })
+vim.keymap.set('n', '<leader>sm', ':Telescope notify<CR>', { desc = '[S]earch [M]essages' })
 -- gen.lua
 vim.keymap.set({ 'n', 'v' }, '<leader>ia', ':Gen Ask<CR>', { desc = "A[I] [A]sk" })
 vim.keymap.set({ 'n', 'v' }, '<leader>ich', ':Gen Change<CR>', { desc = "A[I] [C]hange" })
