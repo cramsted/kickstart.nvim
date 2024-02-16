@@ -151,15 +151,15 @@ require('lazy').setup({
     opts = {
       indent = {
         highlight = {
-          "CursorColumn",
           "Whitespace",
+          "CursorColumn",
         },
         char = ""
       },
       whitespace = {
         highlight = {
-          "CursorColumn",
           "Whitespace",
+          "CursorColumn",
         },
         remove_blankline_trail = false,
       },
